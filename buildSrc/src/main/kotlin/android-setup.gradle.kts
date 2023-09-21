@@ -1,3 +1,5 @@
+import gradle.kotlin.dsl.accessors._c65af4f798638475cce92e0c6691f51f.kotlin
+
 plugins {
     id("com.android.library")
 }
@@ -11,8 +13,14 @@ android {
     }
 
     compileOptions {
-        sourceCompatibility = JavaVersion.VERSION_1_8
-        targetCompatibility = JavaVersion.VERSION_1_8
+        sourceCompatibility = JavaVersion.VERSION_17
+        targetCompatibility = JavaVersion.VERSION_17
+    }
+
+    kotlin {
+        jvmToolchain {
+            languageVersion.set(JavaLanguageVersion.of("17"))
+        }
     }
 
     packagingOptions {
